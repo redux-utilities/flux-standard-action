@@ -1,6 +1,6 @@
 {
   "name": "flux-standard-action",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A human-friendly standard for Flux action objects",
   "main": "lib/index.js",
   "scripts": {
