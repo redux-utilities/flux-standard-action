@@ -1,8 +1,8 @@
 Flux Standard Action
 ====================
 
-[![build status](https://img.shields.io/travis/acdlite/flux-action-standard/master.svg?style=flat-square)](https://travis-ci.org/acdlite/flux-action-standard)
-[![npm version](https://img.shields.io/npm/v/flux-action-standard.svg?style=flat-square)](https://www.npmjs.com/package/flux-action-standard)
+[![build status](https://img.shields.io/travis/acdlite/flux-standard-action/master.svg?style=flat-square)](https://travis-ci.org/acdlite/flux-standard-action)
+[![npm version](https://img.shields.io/npm/v/flux-standard-action.svg?style=flat-square)](https://www.npmjs.com/package/flux-standard-action)
 
 ## Introduction
 
