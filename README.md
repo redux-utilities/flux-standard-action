@@ -1,6 +1,9 @@
 Flux Standard Action
 ====================
 
+[![build status](https://img.shields.io/travis/acdlite/flux-action-standard/master.svg?style=flat-square)](https://travis-ci.org/acdlite/flux-action-standard)
+[![npm version](https://img.shields.io/npm/v/flux-action-standard.svg?style=flat-square)](https://www.npmjs.com/package/flux-action-standard)
+
 ## Introduction
 
 A human-friendly standard for Flux action objects. Feedback welcome.
