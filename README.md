@@ -43,7 +43,7 @@ An action MAY
 - have a `status` property.
 - have a `body` property.
 
-Properties other than for `type`, `body`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself. To compare the equality of two FSA actions, it is sufficient to compare only those three properties.
+Properties other than for `type`, `body`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself.
 
 ### `type`
 
