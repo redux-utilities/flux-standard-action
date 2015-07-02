@@ -72,18 +72,22 @@ By convention, if the `status` is `error`, the `body` SHOULD be an error object.
 
 ## Utility functions
 
-The module `flux-standard-action` is available on npm. It exports a helper method `isFSA()`, which returns true if an action is a Flux Standard Action.
+The module `flux-standard-action` is available on npm. It exports a few utlity functions.
 
 ```js
-import { isFSA } from 'flux-standard-action';
-
-expect(isFSA({ type: 'ACTION_TYPE' })).to.be.true;
+import { isFSA, isSuccess, isError } from 'flux-standard-action';
 ```
+### `isFSA(action)`
 
-Additional utilities yet to be implemented:
+Returns true if `action` is FSA compliant.
 
- - `isSuccess()` - returns true if consumer should treat action as successful
- - `isError()` - returns true if consumer should treat action as a failure
+### `isSuccess(action)`
+
+Returns true if `action` should be interpreted by consumer as successful.
+
+### `isError(action)`
+
+Returns true if `action` should be interpreted by consumer as unsuccessful. Note that this is not a perfect inverse of `isSuccess`. For example, if the status of `action` is `'pending'`, the action should be interpreted as neither successful nor unsuccessful — it should be ignored.
 
 ## Libraries
 
