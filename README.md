@@ -25,7 +25,7 @@ A basic Flux standard action:
 ```js
 {
   type: 'ADD_TODO',
-  body: {
+  payload: {
     text: 'Do something.'  
   }
 }
@@ -41,9 +41,9 @@ An action MUST
 An action MAY
 
 - have a `status` property.
-- have a `body` property.
+- have a `payload` property.
 
-Properties other than for `type`, `body`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself.
+Properties other than for `type`, `payload`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself.
 
 ### `type`
 
@@ -64,11 +64,11 @@ If `status` is defined but not one of `success` or `error`, the consumer MUST NO
 
 An example of using a `status` other than `success` or `error` is if the action will be transformed before being sent to the consumer, at which point `status` can be updated.
 
-### `body`
+### `payload`
 
-The optional `body` property can be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `status` should be part of the `body` field.
+The optional `payload` property can be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `status` should be part of the `payload` field.
 
-By convention, if the `status` is `error`, the `body` SHOULD be an error object. This is akin to rejecting a promise with an error object.
+By convention, if the `status` is `error`, the `payload` SHOULD be an error object. This is akin to rejecting a promise with an error object.
 
 ## Utility functions
 
