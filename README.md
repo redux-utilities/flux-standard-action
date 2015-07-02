@@ -43,7 +43,7 @@ An action MAY
 - have a `status` property.
 - have a `body` property.
 
-All properties other than for `type`, `body`, and `status` are technically permitted, but they should not be used by the consumer. To compare the equality of two FSA actions, it is sufficient to compare only those three properties.
+Properties other than for `type`, `body`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself. To compare the equality of two FSA actions, it is sufficient to compare only those three properties.
 
 ### `type`
 
@@ -84,7 +84,6 @@ Additional utilities yet to be implemented:
 
  - `isSuccess()` - returns true if consumer should treat action as successful
  - `isError()` - returns true if consumer should treat action as a failure
- - `stripExtraneous()` - returns new action with extraneous properties removed
 
 ## Libraries
 
