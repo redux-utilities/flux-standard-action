@@ -1,0 +1,30 @@
+{
+  "name": "flux-standard-action",
+  "version": "0.1.0",
+  "description": "A human-friendly standard for Flux action objects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "make clean build"
+  },
+  "keywords": [
+    "flux",
+    "redux",
+    "actions",
+    "fsa"
+  ],
+  "author": "Andrew Clark <acdlite@me.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-eslint": "^3.1.20",
+    "chai": "^3.0.0",
+    "eslint": "^0.24.0",
+    "eslint-config-airbnb": "0.0.6",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^3.2.0"
+  }
+}
