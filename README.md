@@ -89,6 +89,8 @@ Returns true if `action` should be interpreted by consumer as successful.
 
 Returns true if `action` should be interpreted by consumer as unsuccessful. Note that this is not a perfect inverse of `isSuccess`. For example, if the status of `action` is `'pending'`, the action should be interpreted as neither successful nor unsuccessful — it should be ignored.
 
+**NOTE**: `isSuccess()` and `isError()` assume that the passed action is an FSA action, in order to avoid redundant type checks. Make sure you check `isFSA()` first.
+
 ## Libraries
 
 - [redux-fsa](https://github.com/acdlite/redux-fsa) - a set of helpers for creating and handling FSA actions in Redux.
