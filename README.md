@@ -93,3 +93,4 @@ Returns true if `action` should be interpreted by consumer as unsuccessful. Note
 
 - [redux-fsa](https://github.com/acdlite/redux-fsa) - a set of helpers for creating and handling FSA actions in Redux.
 - [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
+- [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.
