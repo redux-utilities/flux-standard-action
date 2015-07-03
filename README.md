@@ -24,7 +24,7 @@ Flux actions can be thought of as an asychronous sequence of values. It is impor
 
 ### Example
 
-A basic Flux standard action:
+A basic Flux Standard Action:
 
 ```js
 {
@@ -32,6 +32,16 @@ A basic Flux standard action:
   payload: {
     text: 'Do something.'  
   }
+}
+```
+
+An FSA that represents an error, analogous to a rejected Promise:
+
+```js
+{
+  type: 'ADD_TODO',
+  payload: new Error(),
+  error: true
 }
 ```
 
@@ -44,56 +54,44 @@ An action MUST
 
 An action MAY
 
-- have a `status` property.
+- have a `error` property.
 - have a `payload` property.
+- have a `meta` property.
 
-Properties other than for `type`, `payload`, and `status` are also permitted, but they SHOULD only contain meta information about the action itself.
+An action MUST NOT include properties other than `type`, `payload`, and `error`, and `meta`.
 
 ### `type`
 
 The `type` of an action identifies to the consumer the nature of the action that has occurred. Two actions with the same `type` MUST be strictly equivalent (using `===`). By convention, `type` is usually string constant or a Symbol.
 
-### `status`
-
-The optional `status` property MAY be one of
-
-- `success` - indicates that action represents a successful operation
-- `error` - indicates that the action represents a failed operation
-
-Other values of `status` are valid, but only `success` and `error` are treated with any special meaning.
-
-`status` MAY be undefined, in which case the consumer MUST treat the action as if its status were `success`.
-
-If `status` is defined but not one of `success` or `error`, the consumer MUST NOT respond to the action.
-
-An example of using a `status` other than `success` or `error` is if the action will be transformed before being sent to the consumer, at which point `status` can be updated.
-
 ### `payload`
 
-The optional `payload` property can be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `status` should be part of the `payload` field.
+The optional `payload` property MAY be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `status` should be part of the `payload` field.
 
 By convention, if the `status` is `error`, the `payload` SHOULD be an error object. This is akin to rejecting a promise with an error object.
+
+### `error`
+
+The optional `error` property MAY be set to `true` if the action represents an error.
+
+An action whose `error` is true is analogous to a rejected Promise. By convention, the `payload` SHOULD by an error object.
+
+If `error` has any other value besides `true`, including `undefined` and `null`, the action MUST NOT be interpreted as an error.
+
+### `meta`
+
+The optional `meta` property MAY be any type of value. It is intended for any extra information that is not part of the payload.
 
 ## Utility functions
 
 The module `flux-standard-action` is available on npm. It exports a few utlity functions.
 
 ```js
-import { isFSA, isSuccess, isError } from 'flux-standard-action';
+import { isFSA } from 'flux-standard-action';
 ```
 ### `isFSA(action)`
 
 Returns true if `action` is FSA compliant.
-
-### `isSuccess(action)`
-
-Returns true if `action` should be interpreted by consumer as successful.
-
-### `isError(action)`
-
-Returns true if `action` should be interpreted by consumer as unsuccessful. Note that this is not a perfect inverse of `isSuccess`. For example, if the status of `action` is `'pending'`, the action should be interpreted as neither successful nor unsuccessful — it should be ignored.
-
-**NOTE**: `isSuccess()` and `isError()` assume that the passed action is an FSA action, in order to avoid redundant type checks. Make sure you check `isFSA()` first.
 
 ## Libraries
 

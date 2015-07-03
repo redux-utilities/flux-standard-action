@@ -1,19 +1,24 @@
 import isPlainObject from 'lodash.isplainobject';
 
-export function isFSA(action) {
-  return isPlainObject(action) && typeof action.type !== 'undefined';
+const validKeys = [
+  'type',
+  'payload',
+  'error',
+  'meta'
+];
+
+function isValidKey(key) {
+  return validKeys.indexOf(key) > -1;
 }
 
-export function isSuccess(action) {
+export function isFSA(action) {
   return (
-    isFSA(action) &&
-    (typeof action.status === 'undefined' || action.status === 'success')
+    isPlainObject(action) &&
+    typeof action.type !== 'undefined' &&
+    Object.keys(action).every(isValidKey)
   );
 }
 
 export function isError(action) {
-  return (
-    isFSA(action) &&
-    action.status === 'error'
-  );
+  return action.error === true;
 }
