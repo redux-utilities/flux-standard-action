@@ -47,7 +47,7 @@ Properties other than for `type`, `payload`, and `status` are also permitted, bu
 
 ### `type`
 
-The `type` of an action identifies to the consumer the nature of the action that has occurred. By convention, this is usually a string constant. FSA does not enforce this requirement, only that it MUST be defined.
+The `type` of an action identifies to the consumer the nature of the action that has occurred. Two actions with the same `type` MUST be strictly equivalent (using `===`). By convention, `type` is usually string constant or a Symbol.
 
 ### `status`
 
