@@ -14,7 +14,7 @@ It's much easier to work with Flux actions if we can make certain assumptions ab
 
 ### Errors as a first class concept
 
-Flux actions can be thought of as an asychronous sequence of values. It is important for asynchrnous sequences to deal with errors. Currently, many Flux implementations don't do this, and instead define separate action types like `LOAD_SUCCESS` and `LOAD_FAILURE`. This is less than ideal, because it overloads two separate concerns: disambiguating actions of a certain type from the "global" action sequence, and indicating whether or not an action represents an error. FSA treats errors as a first class concept.
+Flux actions can be thought of as an asychronous sequence of values. It is important for asynchronous sequences to deal with errors. Currently, many Flux implementations don't do this, and instead define separate action types like `LOAD_SUCCESS` and `LOAD_FAILURE`. This is less than ideal, because it overloads two separate concerns: disambiguating actions of a certain type from the "global" action sequence, and indicating whether or not an action represents an error. FSA treats errors as a first class concept.
 
 ### Design goals
 
