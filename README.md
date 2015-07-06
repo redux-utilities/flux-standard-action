@@ -66,9 +66,9 @@ The `type` of an action identifies to the consumer the nature of the action that
 
 ### `payload`
 
-The optional `payload` property MAY be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `status` should be part of the `payload` field.
+The optional `payload` property MAY be any type of value. It represents the payload of the action. Any information about the action that is not the `type` or `error` should be part of the `payload` field.
 
-By convention, if the `status` is `error`, the `payload` SHOULD be an error object. This is akin to rejecting a promise with an error object.
+By convention, if the `error` is `true`, the `payload` SHOULD be an error object. This is akin to rejecting a promise with an error object.
 
 ### `error`
 
