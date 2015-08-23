@@ -54,11 +54,11 @@ An action MUST
 
 An action MAY
 
-- have a `error` property.
+- have an `error` property.
 - have a `payload` property.
 - have a `meta` property.
 
-An action MUST NOT include properties other than `type`, `payload`, and `error`, and `meta`.
+An action MUST NOT include properties other than `type`, `payload`, `error` and `meta`.
 
 ### `type`
 
