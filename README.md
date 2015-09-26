@@ -98,3 +98,4 @@ Returns true if `action` is FSA compliant.
 - [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
 - [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
 - [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.
+- [flux-standard-action-json](https://github.com/rstuven/flux-standard-action-json) - JSON serialization utilities for FSA actions.
