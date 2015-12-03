@@ -23,8 +23,5 @@
     "eslint": "^0.24.0",
     "eslint-config-airbnb": "0.0.6",
     "mocha": "^2.2.5"
-  },
-  "dependencies": {
-    "lodash.isplainobject": "^3.2.0"
   }
 }
