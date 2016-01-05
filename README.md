@@ -62,7 +62,7 @@ An action MUST NOT include properties other than `type`, `payload`, and `error`,
 
 ### `type`
 
-The `type` of an action identifies to the consumer the nature of the action that has occurred. Two actions with the same `type` MUST be strictly equivalent (using `===`). By convention, `type` is usually string constant or a Symbol.
+The `type` of an action identifies to the consumer the nature of the action that has occurred. By convention, `type` is usually a string constant or a Symbol. If two types are the same, they MUST be strictly equivalent (using `===`).
 
 ### `payload`
 
