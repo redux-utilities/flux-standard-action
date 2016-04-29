@@ -93,6 +93,14 @@ import { isFSA } from 'flux-standard-action';
 
 Returns true if `action` is FSA compliant.
 
+## Unit Tests
+
+If you use [`expect`](https://github.com/mjackson/expect) for unit tests, you can use [`expect-predicate`](https://github.com/erikras/expect-predicate) with the above `isFSA()` predicate to confirm that your action creators are creating flux standard actions.
+
+```js
+expect(myActionCreator(params)).toPass(isFSA)
+```
+
 ## Libraries
 
 - [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
