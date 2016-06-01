@@ -7,6 +7,10 @@
     "test": "make test",
     "prepublish": "make clean build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/acdlite/flux-standard-action.git"
+  },
   "keywords": [
     "flux",
     "redux",
