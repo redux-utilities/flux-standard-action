@@ -84,7 +84,7 @@ The optional `meta` property MAY be any type of value. It is intended for any ex
 
 ## Utility functions
 
-The module `flux-standard-action` is available on npm. It exports a few utlity functions.
+The module `flux-standard-action` is available on npm. It exports a few utility functions.
 
 ```js
 import { isFSA } from 'flux-standard-action';
