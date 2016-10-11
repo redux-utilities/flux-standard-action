@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { isError } from '../src/';
 
 const type = 'ACTION_TYPE';
