@@ -21,7 +21,7 @@ describe('isFSA()', () => {
   it('only returns true if type is a string or symbol', () => {
     // remove this assertion if/when symbol support is dropped
     expect(isFSA({ type: symbolType })).to.be.true;
-    expect(isFSA({ type: false })).to.be.false;
+    expect(isFSA({ type: true })).to.be.false;
     expect(isFSA({ type: 123 })).to.be.false;
   });
 
