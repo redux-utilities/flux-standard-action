@@ -24,7 +24,6 @@
   "author": "Andrew Clark <acdlite@me.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^6.5.2",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
