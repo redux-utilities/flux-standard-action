@@ -15,6 +15,10 @@
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test nyc mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/acdlite/flux-standard-action.git"
+  },
   "keywords": [
     "flux",
     "redux",
