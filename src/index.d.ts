@@ -31,6 +31,12 @@ export interface FluxStandardAction {
  */
 export type FSA = FluxStandardAction;
 
+/**
+ * Returns `true` if `action` is FSA compliant.
+ */
 export function isFSA(action: any): boolean;
 
+/**
+ * Returns `true` if `action` is FSA compliant error.
+ */
 export function isError(action: any): boolean;

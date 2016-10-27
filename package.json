@@ -3,7 +3,7 @@
   "version": "0.6.1",
   "description": "A human-friendly standard for Flux action objects",
   "main": "lib/index.js",
-  "typings": "index.d.ts",
+  "typings": "src/index.d.ts",
   "files": [
     "lib"
   ],
