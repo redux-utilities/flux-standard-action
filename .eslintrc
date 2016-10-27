@@ -1,5 +1,5 @@
 {
-  "extends": "eslint-config-airbnb",
+  "extends": "eslint-config-airbnb-base",
   "env": {
     "mocha": true,
     "node": true
@@ -8,8 +8,8 @@
     "expect": true
   },
   "rules": {
-    "padded-blocks": 0,
-    "no-use-before-define": [2, "nofunc"],
-    "no-unused-expressions": 0
+    "no-use-before-define": 0,
+    "no-unused-expressions": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!test/**/*.js"]}]
   }
 }
