@@ -16,7 +16,7 @@ export interface FluxStandardAction {
    * The optional `error` property MAY be set to true if the action represents an error.
    * An action whose `error` is true is analogous to a rejected Promise.
    * By convention, the `payload` SHOULD be an error object.
-   * If `error` has any other value besides `true`, including `undefined` and `null`, the action MUST NOT be interpreted as an error.
+   * If `error` has any other value besides `true`, including `undefined`, the action MUST NOT be interpreted as an error.
    */
   error?: boolean;
   /**
