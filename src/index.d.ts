@@ -18,7 +18,7 @@ export interface FluxStandardAction {
    * By convention, the `payload` SHOULD be an error object.
    * If `error` has any other value besides `true`, including `undefined` and `null`, the action MUST NOT be interpreted as an error.
    */
-  error?: boolean | any;
+  error?: boolean;
   /**
    * The optional `meta` property MAY be any type of value.
    * It is intended for any extra information that is not part of the payload.
