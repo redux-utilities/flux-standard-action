@@ -38,7 +38,7 @@
     "coveralls": "^2.11.14",
     "cross-env": "^3.1.1",
     "eslint": "^3.7.1",
-    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-config-airbnb-base": "^10.0.0",
     "eslint-plugin-import": "^2.0.1",
     "mocha": "^3.0.0",
     "nyc": "^8.3.0",
