@@ -41,7 +41,7 @@
     "eslint-config-airbnb-base": "^10.0.0",
     "eslint-plugin-import": "^2.0.1",
     "mocha": "^3.0.0",
-    "nyc": "^8.3.0",
+    "nyc": "^9.0.1",
     "rimraf": "^2.5.4"
   },
   "dependencies": {
