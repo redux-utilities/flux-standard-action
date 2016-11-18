@@ -8,7 +8,7 @@
     "expect": true
   },
   "rules": {
-    "no-use-before-define": 0,
+    "no-use-before-define": ["error", "nofunc"],
     "no-unused-expressions": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!test/**/*.js"]}]
   }
