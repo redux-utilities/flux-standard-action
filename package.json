@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A human-friendly standard for Flux action objects",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --copy-files",
     "clean": "rimraf lib/",
     "lint": "eslint src/ test/",
     "prepublish": "npm test && npm run build",
