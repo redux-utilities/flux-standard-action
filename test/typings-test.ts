@@ -46,7 +46,7 @@ function reducer(state, action) {
     let iserr: true = action.error // iserr === true
     let err: Error = action.payload
   }
-  else if (isError<MyError>(action)) {
+  else if (isError<MyError, void>(action)) {
     let err: MyError = action.payload
   }
 }
