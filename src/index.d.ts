@@ -31,9 +31,14 @@ export interface ErrorFluxStandardAction<CustomError extends Error, Meta> extend
 }
 
 /**
- * Alias to FluxStandardAction for shorthand
+ * Alias for FluxStandardAction.
  */
 export type FSA<Payload, Meta> = FluxStandardAction<Payload, Meta>;
+
+/**
+ * Alias for ErrorFluxStandardAction.
+ */
+export type ErrorFSA<CustomError extends Error, Meta> = ErrorFluxStandardAction<CustomError, Meta>;
 
 /**
  * Returns `true` if `action` is FSA compliant.
