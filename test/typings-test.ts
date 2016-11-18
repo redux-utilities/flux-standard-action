@@ -20,15 +20,15 @@ function createCustomAction(payload: CustomPayload): FluxStandardAction<CustomPa
 }
 
 function isCustomAction(action: FluxStandardAction<any, any>): action is FluxStandardAction<CustomPayload, any> {
-  return action.type === 'custom'
+  return isFSA(action) && action.type === 'custom'
 }
 
 function isCustomAction2(action: FluxStandardAction<any, any>): action is FluxStandardAction<CustomPayload, CustomMetadata> {
-  return action.type === 'custom2'
+  return isFSA(action) && action.type === 'custom2'
 }
 
 function isCustomAction3(action: any): action is FluxStandardAction<void, string> {
-  return action.type === 'custom3'
+  return isFSA(action) && action.type === 'custom3'
 }
 
 function reducer(state, action) {
