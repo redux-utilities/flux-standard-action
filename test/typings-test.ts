@@ -48,7 +48,7 @@ function reducer(state, action) {
   }
   else if (isError<MyError, void>(action)) {
     let err: MyError = action.payload
-    let some: string = err.someField
+    let someFieldValue: string = err.someField
   }
 }
 
