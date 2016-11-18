@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "tsc-out"
+  },
+  "files": [
+    "test/typings-test.ts"
+  ]
+}

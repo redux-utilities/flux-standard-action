@@ -14,7 +14,7 @@
     "lint": "eslint src/ test/",
     "prepublish": "npm test && npm run build",
     "pretest": "npm run lint",
-    "test": "cross-env NODE_ENV=test nyc mocha"
+    "test": "cross-env NODE_ENV=test nyc mocha && tsc"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,8 @@
     "eslint-plugin-import": "^2.2.0",
     "mocha": "^3.1.2",
     "nyc": "^10.0.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "typescript": "^2.0.10"
   },
   "dependencies": {
     "lodash.isplainobject": "^4.0.6",
