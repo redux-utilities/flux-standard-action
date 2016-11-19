@@ -1,15 +1,15 @@
 import { FluxStandardAction, isError, isFSA } from '../src';
 
 interface CustomPayload {
-  a: number
+  a: number;
 }
 
 interface CustomMetadata {
-  b: string
+  b: string;
 }
 
 interface MyError extends Error {
-  someField: string
+  someField: string;
 }
 
 function createCustomAction(payload: CustomPayload): FluxStandardAction<CustomPayload, any> {
