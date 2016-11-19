@@ -14,7 +14,8 @@
     "lint": "eslint src/ test/",
     "prepublish": "npm test && npm run build",
     "pretest": "npm run lint",
-    "test": "cross-env NODE_ENV=test nyc mocha && tsc"
+    "test": "cross-env NODE_ENV=test nyc mocha",
+    "posttest": "tsc"
   },
   "repository": {
     "type": "git",
