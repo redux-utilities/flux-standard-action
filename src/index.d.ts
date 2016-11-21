@@ -11,7 +11,7 @@ export interface FluxStandardAction<Payload, Meta> {
    * By convention, if `error` is `true`, the `payload` SHOULD be an error object.
    * This is akin to rejecting a promise with an error object.
    */
-  payload?: Payload;
+  payload: Payload;
   /**
    * The optional `error` property MAY be set to true if the action represents an error.
    * An action whose `error` is true is analogous to a rejected Promise.
@@ -23,7 +23,7 @@ export interface FluxStandardAction<Payload, Meta> {
    * The optional `meta` property MAY be any type of value.
    * It is intended for any extra information that is not part of the payload.
    */
-  meta?: Meta
+  meta: Meta
 }
 
 export interface ErrorFluxStandardAction<CustomError extends Error, Meta> extends FluxStandardAction<CustomError, Meta> {
