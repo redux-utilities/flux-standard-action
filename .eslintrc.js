@@ -1,4 +1,4 @@
-{
+module.exports = {
   "extends": "eslint-config-airbnb-base",
   "env": {
     "mocha": true,
@@ -12,4 +12,4 @@
     "no-unused-expressions": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!test/**/*.js"]}]
   }
-}
+};
