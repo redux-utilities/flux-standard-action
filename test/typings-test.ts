@@ -32,13 +32,13 @@ function isCustomAction3(action: any): action is FluxStandardAction<void, string
 }
 
 function isCustomAction4(action: any): action is FluxStandardAction<{ message: string }, void> {
-  return true
+  return true;
 }
 
-let action2 = {}
+let action2 = {};
 if (isCustomAction4(action2)) {
   // type guard infers payload will not be undefined
-  console.log(action2.payload.message)
+  console.log(action2.payload.message);
 }
 
 function reducer(state, action) {
