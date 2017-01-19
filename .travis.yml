@@ -4,5 +4,7 @@ node_js:
   - "stable"
   - 6
   - 4
+  
+cache: yarn
 
 after_success: "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
