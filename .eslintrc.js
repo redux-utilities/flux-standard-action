@@ -7,6 +7,10 @@ module.exports = {
   "globals": {
     "expect": true
   },
+  "parser": "typescript-eslint-parser",
+  "plugins": [
+    "typescript"
+  ],
   "rules": {
     "no-use-before-define": ["error", "nofunc"],
     "no-unused-expressions": 0,

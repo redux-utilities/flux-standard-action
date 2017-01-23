@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "tsc-out",
+    "noEmit": true,
     "strictNullChecks": true,
     "target": "es5"
   },

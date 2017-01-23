@@ -1,6 +1,5 @@
 node_modules
 coverage
-tsc-out
 *.log
 lib
 .idea
