@@ -4,16 +4,12 @@ module.exports = {
     "mocha": true,
     "node": true
   },
-  "globals": {
-    "expect": true
-  },
   "parser": "typescript-eslint-parser",
   "plugins": [
     "typescript"
   ],
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!test/**/*.js"]}],
     "no-use-before-define": ["error", "nofunc"],
-    "no-unused-expressions": 0,
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!test/**/*.js"]}]
   }
 };
