@@ -4,6 +4,9 @@ node_js:
   - "stable"
   - 6
   - 4
+
+env:
+  - COVERALLS_PARALLEL=true
   
 cache: yarn
 
