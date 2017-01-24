@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "strictNullChecks": true,
+    "target": "es5"
+  },
+  "files": [
+    "test/typings-test.ts"
+  ]
+}

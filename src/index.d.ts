@@ -1,4 +1,4 @@
-export interface FluxStandardAction {
+export interface FluxStandardAction<Payload, Meta> {
   /**
    * The `type` of an action identifies to the consumer the nature of the action that has occurred.
    * Two actions with the same `type` MUST be strictly equivalent (using `===`)
@@ -11,7 +11,7 @@ export interface FluxStandardAction {
    * By convention, if `error` is `true`, the `payload` SHOULD be an error object.
    * This is akin to rejecting a promise with an error object.
    */
-  payload?: any;
+  payload: Payload;
   /**
    * The optional `error` property MAY be set to true if the action represents an error.
    * An action whose `error` is true is analogous to a rejected Promise.
@@ -23,20 +23,29 @@ export interface FluxStandardAction {
    * The optional `meta` property MAY be any type of value.
    * It is intended for any extra information that is not part of the payload.
    */
-  meta?: any
+  meta: Meta;
+}
+
+export interface ErrorFluxStandardAction<CustomError extends Error, Meta> extends FluxStandardAction<CustomError, Meta> {
+  error: true;
 }
 
 /**
- * Alias to FluxStandardAction for shorthand
+ * Alias for FluxStandardAction.
  */
-export type FSA = FluxStandardAction;
+export type FSA<Payload, Meta> = FluxStandardAction<Payload, Meta>;
+
+/**
+ * Alias for ErrorFluxStandardAction.
+ */
+export type ErrorFSA<CustomError extends Error, Meta> = ErrorFluxStandardAction<CustomError, Meta>;
 
 /**
  * Returns `true` if `action` is FSA compliant.
  */
-export function isFSA(action: any): boolean;
+export function isFSA<Payload, Meta>(action: any): action is FluxStandardAction<Payload, Meta>;
 
 /**
  * Returns `true` if `action` is FSA compliant error.
  */
-export function isError(action: any): boolean;
+export function isError<CustomError extends Error, Meta>(action: any): action is ErrorFluxStandardAction<CustomError, Meta>;
