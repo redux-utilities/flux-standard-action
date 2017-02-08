@@ -54,6 +54,7 @@
     "typescript-eslint-parser": "^1.0.2"
   },
   "dependencies": {
+    "lodash": "^4.0.0",
     "lodash.isplainobject": "^4.0.6",
     "lodash.isstring": "^4.0.1",
     "lodash.issymbol": "^4.0.1"
