@@ -34,6 +34,7 @@
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-plugin-istanbul": "^4.0.0",
+    "babel-plugin-lodash": "^3.2.11",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
@@ -53,9 +54,7 @@
     "typescript-eslint-parser": "^1.0.2"
   },
   "dependencies": {
-    "lodash.isplainobject": "^4.0.6",
-    "lodash.isstring": "^4.0.1",
-    "lodash.issymbol": "^4.0.1"
+    "lodash": "^4.0.0"
   },
   "nyc": {
     "all": true,

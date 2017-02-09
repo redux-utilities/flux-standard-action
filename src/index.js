@@ -1,6 +1,8 @@
-import isPlainObject from 'lodash.isplainobject';
-import isString from 'lodash.isstring';
-import isSymbol from 'lodash.issymbol';
+import {
+  isPlainObject,
+  isString,
+  isSymbol,
+} from 'lodash';
 
 export function isFSA(action) {
   return (
