@@ -5,7 +5,7 @@ interface CustomPayload {
 }
 
 interface CustomMetadata {
-  b: string;
+  b?: string;
 }
 
 interface MyError extends Error {
@@ -47,10 +47,14 @@ function reducer(state, action) {
   }
   else if (isFSA<CustomPayload, CustomMetadata>(action)) {
     let a: number = action.payload.a;
-    let b: string = action.meta.b;
+    let b: string | undefined;
+
+    if (typeof action.meta !== "undefined") {
+      b = action.meta.b;
+    }
   }
   else if (isFSA<void, string>(action)) {
-    let meta: string = action.meta;
+    let meta: string | undefined = action.meta;
   }
   else if (isError(action)) {
     let iserr: true = action.error; // iserr === true
@@ -68,10 +72,14 @@ function reducer2(state, action) {
   }
   else if (isCustomAction2(action)) {
     let a: number = action.payload.a;
-    let b: string = action.meta.b;
+    let b: string | undefined;
+
+    if (typeof action.meta !== "undefined") {
+      b = action.meta.b;
+    }
   }
   else if (isCustomAction3(action)) {
-    let meta: string = action.meta;
+    let meta: string | undefined = action.meta;
   }
 }
 
