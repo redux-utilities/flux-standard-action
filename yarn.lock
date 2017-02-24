@@ -3413,9 +3413,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-1.0.2.tgz#fd2abacf2ee3d9382ab3e449c8762b6beae4d0d7"
+typescript-eslint-parser@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-2.0.0.tgz#f66f4caf31b28df8b1145e8f2bef0c8e90acd0b2"
   dependencies:
     lodash.unescape "4.0.0"
     object-assign "^4.0.1"
