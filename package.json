@@ -51,7 +51,7 @@
     "nyc": "^10.0.0",
     "rimraf": "^2.5.4",
     "typescript": "^2.0.10",
-    "typescript-eslint-parser": "^1.0.2"
+    "typescript-eslint-parser": "^2.0.0"
   },
   "dependencies": {
     "lodash": "^4.0.0"
