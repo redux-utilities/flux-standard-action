@@ -47,9 +47,11 @@ function reducer(state, action) {
   }
   else if (isFSA<CustomPayload, CustomMetadata>(action)) {
     let a: number = action.payload.a;
-    let b: string = action.meta.b;
+    if (action.meta) {
+      let b: string = action.meta.b;
+    }
   }
-  else if (isFSA<void, string>(action)) {
+  else if (isFSA<void, string>(action) && action.meta) {
     let meta: string = action.meta;
   }
   else if (isError(action)) {
@@ -68,9 +70,11 @@ function reducer2(state, action) {
   }
   else if (isCustomAction2(action)) {
     let a: number = action.payload.a;
-    let b: string = action.meta.b;
+    if (action.meta) {
+      let b: string = action.meta.b;
+    }
   }
-  else if (isCustomAction3(action)) {
+  else if (isCustomAction3(action) && action.meta) {
     let meta: string = action.meta;
   }
 }
