@@ -37,7 +37,7 @@
     "babel-plugin-lodash": "^3.2.11",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
-    "chai": "^3.5.0",
+    "chai": "^4.0.2",
     "conventional-github-releaser": "^1.1.3",
     "coveralls": "^2.11.15",
     "cross-env": "^5.0.0",
