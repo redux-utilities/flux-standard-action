@@ -5,6 +5,6 @@
     "target": "es5"
   },
   "files": [
-    "test/typings-test.ts"
+    "test/typings.test.ts"
   ]
 }

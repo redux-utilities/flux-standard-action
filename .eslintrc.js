@@ -1,7 +1,7 @@
 module.exports = {
   "extends": "eslint-config-airbnb-base",
   "env": {
-    "mocha": true,
+    "jest": true,
     "node": true
   },
   "parser": "typescript-eslint-parser",

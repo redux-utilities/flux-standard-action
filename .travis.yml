@@ -6,8 +6,11 @@ node_js:
   - 4
 
 env:
-  - COVERALLS_PARALLEL=true
-  
+  global:
+    COVERALLS_PARALLEL: true
+
 cache: yarn
+
+script: "yarn test -- --coverage"
 
 after_success: "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
