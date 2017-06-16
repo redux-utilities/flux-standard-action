@@ -38,7 +38,7 @@
     "conventional-github-releaser": "^1.1.11",
     "coveralls": "^2.13.1",
     "dotenv": "^4.0.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-typescript": "^0.1.0",
