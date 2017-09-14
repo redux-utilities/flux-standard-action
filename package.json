@@ -45,7 +45,7 @@
     "jest": "^21.1.0",
     "rimraf": "^2.6.1",
     "typescript": "^2.4.2",
-    "typescript-eslint-parser": "^6.0.1"
+    "typescript-eslint-parser": "^8.0.0"
   },
   "dependencies": {
     "lodash": "^4.0.0"
