@@ -1,7 +1,6 @@
 import {
   isPlainObject,
-  isString,
-  isSymbol,
+  isString
 } from 'lodash';
 
 export function isFSA(action) {
