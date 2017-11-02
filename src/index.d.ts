@@ -3,7 +3,7 @@ export interface FluxStandardAction<Payload, Meta> {
    * The `type` of an action identifies to the consumer the nature of the action that has occurred.
    * Two actions with the same `type` MUST be strictly equivalent (using `===`)
    */
-  type: string | symbol;
+  type: string;
   /**
    * The optional `payload` property MAY be any type of value.
    * It represents the payload of the action.

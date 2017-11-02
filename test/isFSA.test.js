@@ -1,7 +1,6 @@
 import { isFSA } from '../src/';
 
 const type = 'ACTION_TYPE';
-const symbolType = Symbol.for(type);
 
 describe('isFSA()', () => {
   it('requires a type', () => {
@@ -17,9 +16,7 @@ describe('isFSA()', () => {
     expect(isFSA(action)).toBe(false);
   });
 
-  it('only returns true if type is a string or symbol', () => {
-    // remove this assertion if/when symbol support is dropped
-    expect(isFSA({ type: symbolType })).toBe(true);
+  it('only returns true if type is a string', () => {
     expect(isFSA({ type: true })).toBe(false);
     expect(isFSA({ type: 123 })).toBe(false);
   });
