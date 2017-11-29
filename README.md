@@ -99,7 +99,7 @@ Returns true if `action` is FSA compliant.
 ```js
 import { isError } from 'flux-standard-action';
 ```
-Returns true if `action` represents error.
+Returns true if `action` represents an error.
 
 ## Libraries
 
