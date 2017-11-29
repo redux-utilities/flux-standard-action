@@ -86,12 +86,20 @@ The optional `meta` property MAY be any type of value. It is intended for any ex
 
 The module `flux-standard-action` is available on npm. It exports a few utility functions.
 
+### `isFSA(action)`
+
 ```js
 import { isFSA } from 'flux-standard-action';
 ```
-### `isFSA(action)`
-
 Returns true if `action` is FSA compliant.
+
+
+### `isError(action)`
+
+```js
+import { isError } from 'flux-standard-action';
+```
+Returns true if `action` represents an error.
 
 ## Libraries
 
