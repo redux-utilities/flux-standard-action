@@ -12,7 +12,7 @@ export function isFSA(action) {
 }
 
 export function isError(action) {
-  return action.error === true;
+  return isFSA(action) && action.error === true;
 }
 
 function isValidKey(key) {
