@@ -1,8 +1,9 @@
 Flux Standard Action
 ====================
 
-[![build status](https://img.shields.io/travis/reduxactions/flux-standard-action/master.svg?style=flat-square)](https://travis-ci.org/reduxactions/flux-standard-action)
-[![npm version](https://img.shields.io/npm/v/flux-standard-action.svg?style=flat-square)](https://www.npmjs.com/package/flux-standard-action)
+[![Build Status](https://travis-ci.org/redux-utilities/flux-standard-action.svg?branch=master)](https://travis-ci.org/redux-utilities/flux-standard-action)
+[![npm Version](https://img.shields.io/npm/v/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
+[![npm Downloads Monthly](https://img.shields.io/npm/dm/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
 
 ## Introduction
 
