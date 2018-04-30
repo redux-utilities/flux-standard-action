@@ -4,7 +4,9 @@
   "description": "A human-friendly standard for Flux action objects",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prebuild": "npm run clean",
     "build": "babel src --out-dir lib --copy-files",
@@ -20,7 +22,12 @@
     "type": "git",
     "url": "git://github.com/acdlite/flux-standard-action.git"
   },
-  "keywords": ["flux", "redux", "actions", "fsa"],
+  "keywords": [
+    "flux",
+    "redux",
+    "actions",
+    "fsa"
+  ],
   "author": "Andrew Clark <acdlite@me.com>",
   "license": "MIT",
   "devDependencies": {
@@ -28,6 +35,7 @@
     "babel-plugin-lodash": "^3.3.2",
     "babel-preset-env": "^1.6.1",
     "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-typescript": "^0.12.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "prettier": "^1.12.1",
@@ -46,11 +54,16 @@
     "overrides": [
       {
         "files": "test/**/*.js",
-        "env": ["jest"]
+        "env": [
+          "jest"
+        ]
       },
       {
         "files": "**/*.ts",
-        "parser": "typescript-eslint-parser"
+        "parser": "typescript-eslint-parser",
+        "plugins": [
+          "typescript"
+        ]
       }
     ]
   },
