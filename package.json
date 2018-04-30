@@ -10,7 +10,7 @@
     "build": "babel src --out-dir lib --copy-files",
     "precommit": "pretty-quick --staged",
     "clean": "rimraf lib/",
-    "lint": "xo",
+    "lint": "xo 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "prepublish": "npm test && npm run build",
     "pretest": "npm run lint",
     "test": "jest",
@@ -47,9 +47,12 @@
       {
         "files": "test/**/*.js",
         "env": ["jest"]
+      },
+      {
+        "files": "**/*.ts",
+        "parser": "typescript-eslint-parser"
       }
-    ],
-    "parser": "typescript-eslint-parser"
+    ]
   },
   "prettier": {
     "singleQuote": true,
