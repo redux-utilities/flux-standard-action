@@ -3,10 +3,10 @@ language: node_js
 node_js:
   - "stable"
   - 8
-  - 6
+  - "lts/*"
 
 cache: yarn
 
-script: "yarn test --coverage"
+script: "yarn test"
 
 after_success: "npx codecov"
