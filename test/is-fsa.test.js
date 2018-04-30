@@ -1,4 +1,4 @@
-import { isFSA } from '../src/';
+import { isFSA } from '../src';
 
 const type = 'ACTION_TYPE';
 

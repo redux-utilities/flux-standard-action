@@ -4,14 +4,13 @@
   "description": "A human-friendly standard for Flux action objects",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "prebuild": "npm run clean",
     "build": "babel src --out-dir lib --copy-files",
+    "precommit": "pretty-quick --staged",
     "clean": "rimraf lib/",
-    "lint": "eslint src/ test/",
+    "lint": "xo",
     "prepublish": "npm test && npm run build",
     "pretest": "npm run lint",
     "test": "jest",
@@ -21,32 +20,42 @@
     "type": "git",
     "url": "git://github.com/acdlite/flux-standard-action.git"
   },
-  "keywords": [
-    "flux",
-    "redux",
-    "actions",
-    "fsa"
-  ],
+  "keywords": ["flux", "redux", "actions", "fsa"],
   "author": "Andrew Clark <acdlite@me.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-plugin-lodash": "^3.2.11",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-typescript": "^0.5.0",
-    "jest": "^21.1.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1",
     "rimraf": "^2.6.1",
-    "typescript": "^2.4.2",
-    "typescript-eslint-parser": "^14.0.0"
+    "typescript": "^2.8.3",
+    "typescript-eslint-parser": "^15.0.0",
+    "xo": "^0.20.3"
   },
   "dependencies": {
     "lodash": "^4.0.0"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "overrides": [
+      {
+        "files": "test/**/*.js",
+        "env": ["jest"]
+      }
+    ],
+    "parser": "typescript-eslint-parser"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
   },
   "jest": {
     "coverageThreshold": {

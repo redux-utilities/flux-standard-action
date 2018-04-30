@@ -1,7 +1,4 @@
-import {
-  isPlainObject,
-  isString,
-} from 'lodash';
+import { isPlainObject, isString } from 'lodash';
 
 export function isFSA(action) {
   return (
@@ -16,10 +13,5 @@ export function isError(action) {
 }
 
 function isValidKey(key) {
-  return [
-    'type',
-    'payload',
-    'error',
-    'meta',
-  ].indexOf(key) > -1;
+  return ['type', 'payload', 'error', 'meta'].indexOf(key) > -1;
 }

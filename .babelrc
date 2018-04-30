@@ -1,4 +1,4 @@
 {
-  "presets": ["stage-0", ["es2015", { "loose": true }]],
+  "presets": ["env"],
   "plugins": ["lodash"]
 }
