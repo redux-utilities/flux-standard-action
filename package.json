@@ -52,6 +52,14 @@
     "prettier": true,
     "space": true,
     "extensions": [".ts"],
+    "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ]
+    },
     "overrides": [
       {
         "files": "test/**/*.js",
