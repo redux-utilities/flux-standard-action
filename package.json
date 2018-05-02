@@ -12,8 +12,8 @@
     "build": "babel src --out-dir lib --copy-files",
     "precommit": "pretty-quick --staged",
     "clean": "rimraf lib/",
-    "lint": "xo 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "prepublish": "npm test && npm run build",
+    "lint": "xo",
+    "prepublishOnly": "npm run build",
     "pretest": "npm run lint",
     "test": "jest",
     "posttest": "tsc"
@@ -51,6 +51,7 @@
   "xo": {
     "prettier": true,
     "space": true,
+    "extensions": [".ts"],
     "overrides": [
       {
         "files": "test/**/*.js",
@@ -61,6 +62,9 @@
       {
         "files": "**/*.ts",
         "parser": "typescript-eslint-parser",
+        "parserOptions": {
+          "typescript": true
+        },
         "plugins": [
           "typescript"
         ]
