@@ -34,6 +34,9 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-lodash": "^3.3.2",
     "babel-preset-env": "^1.6.1",
+    "eslint-config-jest-files": "^0.1.2",
+    "eslint-config-typescript-basic": "^1.0.1",
+    "eslint-config-unicorn-camelcase": "^0.1.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-typescript": "^0.12.0",
     "husky": "^0.14.3",
@@ -51,32 +54,13 @@
   "xo": {
     "prettier": true,
     "space": true,
-    "extensions": [".ts"],
-    "rules": {
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
-      ]
-    },
-    "overrides": [
-      {
-        "files": "test/**/*.js",
-        "env": [
-          "jest"
-        ]
-      },
-      {
-        "files": "**/*.ts",
-        "parser": "typescript-eslint-parser",
-        "parserOptions": {
-          "typescript": true
-        },
-        "plugins": [
-          "typescript"
-        ]
-      }
+    "extensions": [
+      ".ts"
+    ],
+    "extends": [
+      "jest-files",
+      "typescript-basic",
+      "unicorn-camelcase"
     ]
   },
   "prettier": {
