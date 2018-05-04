@@ -1,9 +1,9 @@
 # Flux Standard Action
 
 [![Build Status](https://travis-ci.org/redux-utilities/flux-standard-action.svg?branch=master)](https://travis-ci.org/redux-utilities/flux-standard-action)
+[![codecov](https://codecov.io/gh/redux-utilities/flux-standard-action/branch/master/graph/badge.svg)](https://codecov.io/gh/redux-utilities/flux-standard-action)
 [![npm Version](https://img.shields.io/npm/v/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
 [![npm Downloads Monthly](https://img.shields.io/npm/dm/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
-[![codecov](https://codecov.io/gh/redux-utilities/flux-standard-action/branch/master/graph/badge.svg)](https://codecov.io/gh/redux-utilities/flux-standard-action)
 
 ## Introduction
 
