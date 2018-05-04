@@ -1,7 +1,7 @@
-Flux Standard Action
-====================
+# Flux Standard Action
 
 [![Build Status](https://travis-ci.org/redux-utilities/flux-standard-action.svg?branch=master)](https://travis-ci.org/redux-utilities/flux-standard-action)
+[![codecov](https://codecov.io/gh/redux-utilities/flux-standard-action/branch/master/graph/badge.svg)](https://codecov.io/gh/redux-utilities/flux-standard-action)
 [![npm Version](https://img.shields.io/npm/v/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
 [![npm Downloads Monthly](https://img.shields.io/npm/dm/flux-standard-action.svg)](https://www.npmjs.com/package/flux-standard-action)
 
@@ -19,9 +19,9 @@ Flux actions can be thought of as an asynchronous sequence of values. It is impo
 
 ### Design goals
 
-- **Human-friendly.** FSA actions should be easy to read and write by humans.
-- **Useful**. FSA actions should enable the creation of useful tools and abstractions.
-- **Simple.** FSA should be simple, straightforward, and flexible in its design.
+* **Human-friendly.** FSA actions should be easy to read and write by humans.
+* **Useful**. FSA actions should enable the creation of useful tools and abstractions.
+* **Simple.** FSA should be simple, straightforward, and flexible in its design.
 
 ### Example
 
@@ -50,14 +50,14 @@ An FSA that represents an error, analogous to a rejected Promise:
 
 An action MUST
 
-- be a plain JavaScript object.
-- have a `type` property.
+* be a plain JavaScript object.
+* have a `type` property.
 
 An action MAY
 
-- have an `error` property.
-- have a `payload` property.
-- have a `meta` property.
+* have an `error` property.
+* have a `payload` property.
+* have a `meta` property.
 
 An action MUST NOT include properties other than `type`, `payload`, `error`, and `meta`.
 
@@ -92,18 +92,19 @@ The module `flux-standard-action` is available on npm. It exports a few utility 
 ```js
 import { isFSA } from 'flux-standard-action';
 ```
-Returns true if `action` is FSA compliant.
 
+Returns true if `action` is FSA compliant.
 
 ### `isError(action)`
 
 ```js
 import { isError } from 'flux-standard-action';
 ```
+
 Returns true if `action` represents an error.
 
 ## Libraries
 
-- [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
-- [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
-- [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.
+* [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
+* [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
+* [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.

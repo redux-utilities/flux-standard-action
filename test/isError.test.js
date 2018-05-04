@@ -1,4 +1,4 @@
-import { isError } from '../src/';
+import { isError } from '../src';
 
 const type = 'ACTION_TYPE';
 

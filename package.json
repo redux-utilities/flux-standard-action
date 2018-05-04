@@ -10,9 +10,10 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "babel src --out-dir lib --copy-files",
+    "precommit": "pretty-quick --staged",
     "clean": "rimraf lib/",
-    "lint": "eslint src/ test/",
-    "prepublish": "npm test && npm run build",
+    "lint": "xo",
+    "prepublishOnly": "npm run build",
     "pretest": "npm run lint",
     "test": "jest",
     "posttest": "tsc"
@@ -31,24 +32,44 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-plugin-lodash": "^3.2.11",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-typescript": "^0.5.0",
-    "jest": "^21.1.0",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint-config-jest-files": "^0.1.2",
+    "eslint-config-typescript-basic": "^1.0.1",
+    "eslint-config-unicorn-camelcase": "^0.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1",
     "rimraf": "^2.6.1",
-    "typescript": "^2.4.2",
-    "typescript-eslint-parser": "^14.0.0"
+    "typescript": "^2.8.3",
+    "typescript-eslint-parser": "^15.0.0",
+    "xo": "^0.20.3"
   },
   "dependencies": {
     "lodash": "^4.0.0"
   },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extensions": [
+      ".ts"
+    ],
+    "extends": [
+      "jest-files",
+      "typescript-basic",
+      "unicorn-camelcase"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
   "jest": {
+    "collectCoverage": true,
     "coverageThreshold": {
       "global": {
         "branches": 100,

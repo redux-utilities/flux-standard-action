@@ -2,16 +2,10 @@ sudo: false
 language: node_js
 node_js:
   - "stable"
-  - 8
-  - 6
-  - 4
-
-env:
-  global:
-    COVERALLS_PARALLEL: true
+  - "lts/*"
 
 cache: yarn
 
-script: "yarn test -- --coverage"
+script: "yarn test"
 
-after_success: "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+after_success: "npx codecov"
