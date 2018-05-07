@@ -11,7 +11,7 @@ export interface FluxStandardAction<Payload, Meta = undefined> {
    * By convention, if `error` is `true`, the `payload` SHOULD be an error object.
    * This is akin to rejecting a promise with an error object.
    */
-  payload: Payload;
+  payload?: Payload;
   /**
    * The optional `error` property MAY be set to true if the action represents an error.
    * An action whose `error` is true is analogous to a rejected Promise.
@@ -26,7 +26,10 @@ export interface FluxStandardAction<Payload, Meta = undefined> {
   meta?: Meta;
 }
 
-export interface ErrorFluxStandardAction<CustomError extends Error, Meta = undefined> extends FluxStandardAction<CustomError, Meta> {
+export interface ErrorFluxStandardAction<
+  CustomError extends Error,
+  Meta = undefined
+> extends FluxStandardAction<CustomError, Meta> {
   error: true;
 }
 
@@ -38,14 +41,21 @@ export type FSA<Payload, Meta = undefined> = FluxStandardAction<Payload, Meta>;
 /**
  * Alias for ErrorFluxStandardAction.
  */
-export type ErrorFSA<CustomError extends Error, Meta = undefined> = ErrorFluxStandardAction<CustomError, Meta>;
+export type ErrorFSA<
+  CustomError extends Error,
+  Meta = undefined
+> = ErrorFluxStandardAction<CustomError, Meta>;
 
 /**
  * Returns `true` if `action` is FSA compliant.
  */
-export function isFSA<Payload, Meta = undefined>(action: any): action is FluxStandardAction<Payload, Meta>;
+export function isFSA<Payload, Meta = undefined>(
+  action: any
+): action is FluxStandardAction<Payload, Meta>;
 
 /**
  * Returns `true` if `action` is FSA compliant error.
  */
-export function isError<CustomError extends Error, Meta = undefined>(action: any): action is ErrorFluxStandardAction<CustomError, Meta>;
+export function isError<CustomError extends Error, Meta = undefined>(
+  action: any
+): action is ErrorFluxStandardAction<CustomError, Meta>;
