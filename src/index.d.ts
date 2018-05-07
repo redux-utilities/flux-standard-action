@@ -23,7 +23,7 @@ export interface FluxStandardAction<Payload, Meta = undefined> {
    * The optional `meta` property MAY be any type of value.
    * It is intended for any extra information that is not part of the payload.
    */
-  meta: Meta;
+  meta?: Meta;
 }
 
 export interface ErrorFluxStandardAction<CustomError extends Error, Meta = undefined> extends FluxStandardAction<CustomError, Meta> {
