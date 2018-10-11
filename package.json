@@ -76,6 +76,7 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "testURL": "http://localhost"
   }
 }
