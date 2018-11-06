@@ -1,9 +1,13 @@
-export interface FluxStandardAction<Payload, Meta = undefined> {
+export interface FluxStandardAction<
+  Payload = undefined,
+  Meta = undefined,
+  Type extends string = string
+> {
   /**
    * The `type` of an action identifies to the consumer the nature of the action that has occurred.
    * Two actions with the same `type` MUST be strictly equivalent (using `===`)
    */
-  type: string;
+  type: Type;
   /**
    * The optional `payload` property MAY be any type of value.
    * It represents the payload of the action.
@@ -28,34 +32,42 @@ export interface FluxStandardAction<Payload, Meta = undefined> {
 
 export interface ErrorFluxStandardAction<
   CustomError extends Error,
-  Meta = undefined
-> extends FluxStandardAction<CustomError, Meta> {
+  Meta = undefined,
+  Type extends string = string
+> extends FluxStandardAction<CustomError, Meta, Type> {
   error: true;
 }
 
 /**
  * Alias for FluxStandardAction.
  */
-export type FSA<Payload, Meta = undefined> = FluxStandardAction<Payload, Meta>;
+export type FSA<
+  Payload,
+  Meta = undefined,
+  Type extends string = string
+> = FluxStandardAction<Payload, Meta, Type>;
 
 /**
  * Alias for ErrorFluxStandardAction.
  */
 export type ErrorFSA<
   CustomError extends Error,
-  Meta = undefined
-> = ErrorFluxStandardAction<CustomError, Meta>;
+  Meta = undefined,
+  Type extends string = string
+> = ErrorFluxStandardAction<CustomError, Meta, Type>;
 
 /**
  * Returns `true` if `action` is FSA compliant.
  */
-export function isFSA<Payload, Meta = undefined>(
+export function isFSA<Payload, Meta = undefined, Type extends string = string>(
   action: any
-): action is FluxStandardAction<Payload, Meta>;
+): action is FluxStandardAction<Payload, Meta, Type>;
 
 /**
  * Returns `true` if `action` is FSA compliant error.
  */
-export function isError<CustomError extends Error, Meta = undefined>(
-  action: any
-): action is ErrorFluxStandardAction<CustomError, Meta>;
+export function isError<
+  CustomError extends Error,
+  Meta = undefined,
+  Type extends string = string
+>(action: any): action is ErrorFluxStandardAction<CustomError, Meta, Type>;
