@@ -31,7 +31,7 @@ export interface FluxStandardAction<
 }
 
 export interface ErrorFluxStandardAction<
-  CustomError extends Error,
+  CustomError extends Error = Error,
   Meta = undefined,
   Type extends string = string
 > extends FluxStandardAction<CustomError, Meta, Type> {
@@ -42,7 +42,7 @@ export interface ErrorFluxStandardAction<
  * Alias for FluxStandardAction.
  */
 export type FSA<
-  Payload,
+  Payload = undefined,
   Meta = undefined,
   Type extends string = string
 > = FluxStandardAction<Payload, Meta, Type>;
@@ -51,7 +51,7 @@ export type FSA<
  * Alias for ErrorFluxStandardAction.
  */
 export type ErrorFSA<
-  CustomError extends Error,
+  CustomError extends Error = Error,
   Meta = undefined,
   Type extends string = string
 > = ErrorFluxStandardAction<CustomError, Meta, Type>;
@@ -59,15 +59,17 @@ export type ErrorFSA<
 /**
  * Returns `true` if `action` is FSA compliant.
  */
-export function isFSA<Payload, Meta = undefined, Type extends string = string>(
-  action: any
-): action is FluxStandardAction<Payload, Meta, Type>;
+export function isFSA<
+  Payload = undefined,
+  Meta = undefined,
+  Type extends string = string
+>(action: any): action is FluxStandardAction<Payload, Meta, Type>;
 
 /**
  * Returns `true` if `action` is FSA compliant error.
  */
 export function isError<
-  CustomError extends Error,
+  CustomError extends Error = Error,
   Meta = undefined,
   Type extends string = string
 >(action: any): action is ErrorFluxStandardAction<CustomError, Meta, Type>;
