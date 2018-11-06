@@ -30,6 +30,7 @@
   "author": "Andrew Clark <acdlite@me.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^23.3.9",
     "babel-cli": "^6.26.0",
     "babel-plugin-lodash": "^3.3.2",
     "babel-preset-env": "^1.6.1",
@@ -43,7 +44,8 @@
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1",
     "rimraf": "^2.6.1",
-    "typescript": "^2.8.3",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.6",
     "typescript-eslint-parser": "^15.0.0",
     "xo": "^0.20.3"
   },

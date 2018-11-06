@@ -4,7 +4,5 @@
     "strictNullChecks": true,
     "target": "es5"
   },
-  "files": [
-    "test/typings.test.ts"
-  ]
+  "files": ["src/index.d.ts"]
 }
