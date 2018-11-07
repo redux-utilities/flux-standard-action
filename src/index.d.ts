@@ -1,3 +1,6 @@
+/**
+ * A Flux Standard action with optional payload and metadata properties.
+ */
 export interface FluxStandardAction<
   Payload = undefined,
   Meta = undefined,
@@ -30,11 +33,17 @@ export interface FluxStandardAction<
   meta?: Meta;
 }
 
+/**
+ * An extension of the Flux Standard action that represents an action containing an error as its payload.
+ */
 export interface ErrorFluxStandardAction<
   CustomError extends Error = Error,
   Meta = undefined,
   Type extends string = string
 > extends FluxStandardAction<CustomError, Meta, Type> {
+  /**
+   * The required `error` property MUST be set to `true` if the action represents an error.
+   */
   error: true;
 }
 
