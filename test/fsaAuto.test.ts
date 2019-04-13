@@ -1,4 +1,4 @@
-import { FSAAuto, isFSA } from '../src';
+import { FSAAuto } from '../src';
 
 describe('Usage of FSAAuto (automatically infer required properties', () => {
   it('must specify payload property even when using a union with undefined', () => {
@@ -9,7 +9,7 @@ describe('Usage of FSAAuto (automatically infer required properties', () => {
     // Not possible to cast!!!
     // expectOptionalPayload(fsa_without_payload);
 
-    function expectOptionalPayload(fsa: FSAAuto<string | undefined>) {
+    function expectOptionalPayload(fsa: FSAAuto<string, string | undefined>) {
       expect(fsa.payload).toBeUndefined();
     }
   });

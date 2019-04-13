@@ -2,7 +2,7 @@ import { FSA } from '../src';
 
 const ACTION_TYPE_1 = 'ACTION_TYPE_1';
 type ACTION_TYPE_1 = typeof ACTION_TYPE_1;
-type FSA_ACTION_TYPE_1 = FSA<undefined, undefined, ACTION_TYPE_1>;
+type FSA_ACTION_TYPE_1 = FSA<ACTION_TYPE_1>;
 
 const assertNever = (x: never): never => {
   throw new Error(`Unexpected value: ${x}.`);
