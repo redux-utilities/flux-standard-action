@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/acdlite/flux-standard-action.git"
+    "url": "git://github.com/redux-utilities/flux-standard-action.git"
   },
   "keywords": [
     "flux",
