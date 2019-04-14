@@ -1,11 +1,8 @@
-sudo: false
 language: node_js
 node_js:
-  - "stable"
-  - "lts/*"
+  - 'node'
+  - 'lts/*'
 
 cache: yarn
 
-script: "yarn test"
-
-after_success: "npx codecov"
+after_success: 'npx codecov'
