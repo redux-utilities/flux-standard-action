@@ -52,7 +52,8 @@
     "xo": "^0.24.0"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.isstring": "^4.0.1"
   },
   "xo": {
     "prettier": true,
